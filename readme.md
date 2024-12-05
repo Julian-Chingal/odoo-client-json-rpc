@@ -16,7 +16,7 @@
 Para instalar la librería, ejecuta:
 
 ```bash
-npm install odoo-client-json-rpc
+npm install odoo-client-jsonrpc
 ```
 
 ---

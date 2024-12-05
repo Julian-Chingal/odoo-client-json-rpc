@@ -1,5 +1,5 @@
 {
-  "name": "odoo-client-json-rpc",
+  "name": "odoo-client-jsonrpc",
   "version": "1.0.0",
   "description": "librería para Node.js diseñada para facilitar la conexión e interacción con la API de Odoo mediante JSON-RPC.",
   "main": "index.js",
