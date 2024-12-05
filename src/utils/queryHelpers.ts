@@ -20,13 +20,16 @@ const buildDomain = (options: IOptionsProps): IDomain => {
      if (options.partner_type) domain.push(['partner_type', 'in', options.partner_type]);
  
      // Account options
+     if (options.team) domain.push(['team_id', 'ilike', options.team]);
      if (options.parent_state) domain.push(['parent_state', '=', options.parent_state]);
-     if (options.payment_state) domain.push(['payment_state', '!=', 'reversed']);
+     if (options.payment_state) domain.push(['payment_state', '=', options.payment_state]);
+     if (options._payment_state) domain.push(['payment_state', '!=', options._payment_state]);
      if (options.move_type) domain.push(['move_type', '=', options.move_type]);
      if (options.price_subtotal === 0) domain.push(['price_subtotal', '>', options.price_subtotal]);
      if (options.account_ids) domain.push(['account_id', 'in', options.account_ids]);
      if (options.is_reconciled === true || options.is_reconciled === false) domain.push(['is_reconciled', '=', options.is_reconciled]);
      if (options.is_internal_transfer === true || options.is_internal_transfer === false) domain.push(['is_internal_transfer', '=', options.is_internal_transfer]);
+     
      // Stock options
      if (options.sale_line_ids) domain.push(['sale_line_id', 'in', options.sale_line_ids]);
      if (options.reference) domain.push(['reference', '=', options.reference]);

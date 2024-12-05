@@ -56,12 +56,14 @@ export interface IOptionsProps extends IAccountOptions, IStockOptions, IProductO
 // Interface: AccountOptions
 interface IAccountOptions {
     parent_state?: ParentState;
-    payment_state?: PaymentState | PaymentState[];
+    payment_state?: PaymentState;
+    _payment_state?: PaymentState;
     move_type?: MoveType | MoveType[];
     price_subtotal?: number;
     account_ids?: number[];
     is_reconciled?: boolean;
     is_internal_transfer?: boolean;
+    team?: string
 }
 
 // Interface: StockOptions
