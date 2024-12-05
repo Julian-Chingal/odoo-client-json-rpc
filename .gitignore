@@ -1,0 +1,27 @@
+# modules
+node_modules
+dist
+
+# logs
+logs
+
+# Test
+src/index.ts
+
+# local env files
+.env.local
+.env.development.local
+.env.test.local
+.env.production.local
+
+# build output
+build
+
+# dependencies
+.pnp
+.pnp.js
+
+# misc
+pnpm-lock.yaml
+yarn.lock
+package-lock.json
