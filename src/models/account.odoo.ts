@@ -1,4 +1,4 @@
-import { OdooClient } from "../odooClient";
+import { OdooClient } from "..";
 import { IOptionsProps } from "../types/commons";
 import { buildOptions } from "../utils/queryHelpers";
 

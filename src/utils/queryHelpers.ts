@@ -1,4 +1,4 @@
-import { OdooClient } from "../odooClient";
+import { OdooClient } from "..";
 import { IDomain, IOptionsProps } from "../types/commons";
 
 const buildDomain = (options: IOptionsProps): IDomain => {

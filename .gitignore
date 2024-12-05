@@ -1,21 +1,21 @@
 # modules
 node_modules
+build
 dist
 
 # logs
 logs
 
 # Test
-src/index.ts
+src/test.ts
+dist/test.js
+
 
 # local env files
 .env.local
 .env.development.local
 .env.test.local
 .env.production.local
-
-# build output
-build
 
 # dependencies
 .pnp
