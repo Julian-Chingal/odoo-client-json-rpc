@@ -43,7 +43,7 @@ export interface IOptionsProps extends IAccountOptions, IStockOptions, IProductO
     names?: string[];
     personalized?: [string, string, unknown];
     partner_type?: PartnerType | PartnerType[];
-
+    
     // Common: configuration options
     model?: string;
     domain?: IDomain;   
@@ -64,6 +64,8 @@ interface IAccountOptions {
     is_reconciled?: boolean;
     is_internal_transfer?: boolean;
     team?: string
+    vendor_name?: string;
+    _vendor_name?: string;
 }
 
 // Interface: StockOptions

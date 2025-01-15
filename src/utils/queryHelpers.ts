@@ -18,10 +18,10 @@ const buildDomain = (options: IOptionsProps): IDomain => {
      if (options.names) domain.push(['name', 'in', options.names])
      if (options.personalized) domain.push(options.personalized);
      if (options.partner_type) domain.push(['partner_type', 'in', options.partner_type]);
- 
+
      // Account options
-     if (options.team) domain.push(['team_id', 'ilike', options.team]);
      if (options.parent_state) domain.push(['parent_state', '=', options.parent_state]);
+     if (options.team) domain.push(['team_id', 'ilike', options.team]);
      if (options.payment_state) domain.push(['payment_state', '=', options.payment_state]);
      if (options._payment_state) domain.push(['payment_state', '!=', options._payment_state]);
      if (options.move_type) domain.push(['move_type', '=', options.move_type]);
@@ -29,6 +29,8 @@ const buildDomain = (options: IOptionsProps): IDomain => {
      if (options.account_ids) domain.push(['account_id', 'in', options.account_ids]);
      if (options.is_reconciled === true || options.is_reconciled === false) domain.push(['is_reconciled', '=', options.is_reconciled]);
      if (options.is_internal_transfer === true || options.is_internal_transfer === false) domain.push(['is_internal_transfer', '=', options.is_internal_transfer]);
+     if(options.vendor_name) domain.push(['invoice_user_id', 'ilike', options.vendor_name]); 
+     if(options._vendor_name) domain.push(['invoice_user_id', 'not ilike', options._vendor_name]);
      
      // Stock options
      if (options.sale_line_ids) domain.push(['sale_line_id', 'in', options.sale_line_ids]);
